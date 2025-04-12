@@ -17,7 +17,7 @@ const Home = () => {
   
   return (
     <div className="home-container">
-      <h1>🔍 Kutumbua Knowledge Explorer</h1>
+      <h1>🔍 Kutumbua</h1>
       <p>Presentation loading...</p>
     </div>
   );
