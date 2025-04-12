@@ -8,10 +8,10 @@ const slide5 = {
 ## Our Implementation Roadmap:
 
 1. **Phase 1:** ✅ EGL Implementation (Completed)
-2. **Phase 2:** 🔄 European Jurisdictions (In Progress)
-3. **Phase 3:** 📅 Latin American Jurisdictions (Q3 2025)
-4. **Phase 4:** 📅 African and Middle Eastern Jurisdictions (Q4 2025)
-5. **Phase 5:** 📅 Asian-Pacific Jurisdictions (Q1 2026)
+2. **Phase 2:** 🔄 Verify Button with Other Jurisdictions (In Progress)
+3. **Phase 3:** 📅 Improve Authentication Layers (Q3 2025)
+4. **Phase 4:** 📅 Integrate with Lezioni Worldwide (Q4 2025)
+5. **Phase 5:** 📅 Integrate Other Services (Q1 2026)
 
 ### Your Role is Crucial!
 
