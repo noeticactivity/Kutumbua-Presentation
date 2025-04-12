@@ -5,7 +5,7 @@ const slide1 = {
 
 ![Kutumbua Banner](https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=1000&auto=format&fit=crop)
 
-> *"Discovering Hidden Knowledge with Advanced Search Technology"*
+> *"Unifying Global Access Through Seamless Authentication"*
 
 ## Presented by the English Grand Lodge
 `
