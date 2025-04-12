@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Kutumbua-Presentation/static/css/main.c1f4e4a7.css",
-    "main.js": "/Kutumbua-Presentation/static/js/main.e1c72778.js",
+    "main.js": "/Kutumbua-Presentation/static/js/main.91b8cc71.js",
     "static/js/453.6bbaaa32.chunk.js": "/Kutumbua-Presentation/static/js/453.6bbaaa32.chunk.js",
     "index.html": "/Kutumbua-Presentation/index.html",
     "main.c1f4e4a7.css.map": "/Kutumbua-Presentation/static/css/main.c1f4e4a7.css.map",
-    "main.e1c72778.js.map": "/Kutumbua-Presentation/static/js/main.e1c72778.js.map",
+    "main.91b8cc71.js.map": "/Kutumbua-Presentation/static/js/main.91b8cc71.js.map",
     "453.6bbaaa32.chunk.js.map": "/Kutumbua-Presentation/static/js/453.6bbaaa32.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c1f4e4a7.css",
-    "static/js/main.e1c72778.js"
+    "static/js/main.91b8cc71.js"
   ]
 }
