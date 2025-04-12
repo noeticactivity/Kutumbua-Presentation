@@ -1,5 +1,8 @@
 import React, { useEffect } from 'react';
 import { HashRouter as Router, Routes, Route, Link, useParams, useNavigate } from 'react-router-dom';
+import ReactMarkdown from 'react-markdown';
+import rehypeRaw from 'rehype-raw';
+import remarkGfm from 'remark-gfm';
 import './App.css';
 import slideData from './data/slideData';
 
@@ -20,10 +23,23 @@ const Home = () => {
   );
 };
 
-// Slide component
+// Slide component with proper markdown rendering
 const Slide = ({ content }) => {
+  // Initialize Mermaid on each slide render
+  useEffect(() => {
+    if (window.mermaid) {
+      window.mermaid.init(undefined, document.getElementsByClassName('mermaid'));
+    }
+  }, [content]);
+
   return (
-    <div className="slide-content" dangerouslySetInnerHTML={{ __html: content }}></div>
+    <div className="slide-content">
+      <ReactMarkdown 
+        children={content} 
+        rehypePlugins={[rehypeRaw]} 
+        remarkPlugins={[remarkGfm]}
+      />
+    </div>
   );
 };
 
