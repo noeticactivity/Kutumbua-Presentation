@@ -23,21 +23,49 @@ const Home = () => {
   );
 };
 
-// Slide component with proper markdown rendering
-const Slide = ({ content }) => {
-  // Initialize Mermaid on each slide render
+// Mermaid diagram component
+const MermaidDiagram = ({ content }) => {
   useEffect(() => {
     if (window.mermaid) {
-      window.mermaid.init(undefined, document.getElementsByClassName('mermaid'));
+      window.mermaid.contentLoaded();
     }
   }, [content]);
 
+  return <div className="mermaid">{content}</div>;
+};
+
+// Slide component with proper markdown rendering
+const Slide = ({ content }) => {
   return (
     <div className="slide-content">
       <ReactMarkdown 
         children={content} 
         rehypePlugins={[rehypeRaw]} 
         remarkPlugins={[remarkGfm]}
+        components={{
+          // Custom handling for code blocks
+          code({ node, inline, className, children, ...props }) {
+            const match = /language-(\w+)/.exec(className || '');
+            
+            // Special handling for mermaid diagrams
+            if (!inline && match && match[1] === 'mermaid') {
+              return <MermaidDiagram content={String(children).replace(/\n$/, '')} />;
+            }
+            
+            // Default handling for other code blocks
+            return !inline ? (
+              <pre className={className} {...props}>
+                <code className={className} {...props}>
+                  {children}
+                </code>
+              </pre>
+            ) : (
+              <code className={className} {...props}>
+                {children}
+              </code>
+            );
+          }
+        }}
       />
     </div>
   );

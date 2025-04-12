@@ -25,11 +25,11 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>Kutumbua</title>
-    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
     <script>
       // Initialize mermaid with dark theme to match our presentation style
       mermaid.initialize({
-        startOnLoad: true,
+        startOnLoad: false, // We'll load diagrams manually
         theme: 'dark',
         securityLevel: 'loose'
       });
